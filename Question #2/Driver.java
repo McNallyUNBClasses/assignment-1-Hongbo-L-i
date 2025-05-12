@@ -43,15 +43,17 @@ public class Driver
             else 
             {
                 if(!myQueue.isEmpty())
-                try 
                 {
-                    Customer customer = myQueue.dequeue();
-                    customer.served(currentTime);
-                    servedCust++;
-                } 
-                catch (IllegalStateException e) 
-                {
-                    System.err.println("Error: Queue is empty. Invalid dequeue operation." + e.getMessage());
+                    try 
+                    {
+                        Customer customer = myQueue.dequeue();
+                        customer.served(currentTime);
+                        servedCust++;
+                    } 
+                    catch (IllegalStateException e) 
+                    {
+                        System.err.println("Error: Queue is empty. Invalid dequeue operation." + e.getMessage());
+                    }
                 }
             }
         }
