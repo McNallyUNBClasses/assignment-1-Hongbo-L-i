@@ -14,8 +14,8 @@ public class StackDriver
 {
     public static void main(String[] args) 
     {
-        Integer[] array = new Integer[10];
-        Integer[] reArray = new Integer[10];
+        int[] array = new int[10];
+        int[] reArray = new int[10];
         Random randomNum = new Random();
         
         //original array with 10 random integers from -10 to 10
